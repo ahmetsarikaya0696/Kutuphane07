@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kutuphane07.UI", "Kutuphane07.UI\Kutuphane07.UI.csproj", "{751A493C-2319-4E08-B374-278E44BED44C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kutuphane07.DATA", "Kutuphane07.DATA\Kutuphane07.DATA.csproj", "{A184AD80-CAF8-49E2-B87A-5115C8A5DC02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ECF48654-C7CD-406D-BD22-CC70BB27E5A0}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\README.md = Solution Items\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{751A493C-2319-4E08-B374-278E44BED44C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751A493C-2319-4E08-B374-278E44BED44C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751A493C-2319-4E08-B374-278E44BED44C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751A493C-2319-4E08-B374-278E44BED44C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A184AD80-CAF8-49E2-B87A-5115C8A5DC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A184AD80-CAF8-49E2-B87A-5115C8A5DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A184AD80-CAF8-49E2-B87A-5115C8A5DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A184AD80-CAF8-49E2-B87A-5115C8A5DC02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D1BB81D-764B-426B-993D-98306BB070F4}
+	EndGlobalSection
+EndGlobal
