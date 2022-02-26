@@ -87,9 +87,16 @@ namespace Kutuphane07.UI
 
         private void btnSeciliKitabiSil_Click(object sender, EventArgs e)
         {
-            AdminOnayiForm aof = new AdminOnayiForm();
-            aof.KitapSilindi += Aof_KitapSilindi;
-            aof.ShowDialog();
+            if (this.kullanici.KullaniciAdi == "admin")
+            {
+                Aof_KitapSilindi(this, e);
+            }
+            else
+            {
+                AdminOnayiForm aof = new AdminOnayiForm();
+                aof.KitapSilindi += Aof_KitapSilindi;
+                aof.ShowDialog();
+            }
         }
 
         private void Aof_KitapSilindi(object sender, EventArgs e)

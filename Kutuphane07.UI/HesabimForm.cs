@@ -26,7 +26,8 @@ namespace Kutuphane07.UI
         private void FormuYenile()
         {
             dgvOduncAlinanKitaplar.DataSource = null;
-            dgvOduncAlinanKitaplar.DataSource = kullanici.OduncAlinanKitapListesi;
+            if (kullanici.OduncAlinanKitapListesi != null)
+                dgvOduncAlinanKitaplar.DataSource = kullanici.OduncAlinanKitapListesi;
         }
 
         private void HesabimForm_Load(object sender, EventArgs e)

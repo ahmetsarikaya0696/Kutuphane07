@@ -22,13 +22,14 @@ namespace Kutuphane07.UI
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            if (txtAdminKullaniciAdi.Text == KullaniciYoneticisi.Admin.KullaniciAdi && txtAdminSifre.Text == KullaniciYoneticisi.Admin.Parola)
+            if (txtAdminKullaniciAdi.Text == "admin" && KullaniciYoneticisi.GirisBasariliMi(txtAdminKullaniciAdi.Text, txtAdminSifre.Text))
             {
                 MessageBox.Show("İşlem onaylandı!");
                 if (KitapSilindi != null)
                 {
                     KitapSilindi(this, e);
                 }
+                Close();
             }
             else
             {

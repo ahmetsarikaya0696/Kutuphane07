@@ -8,7 +8,6 @@ namespace Kutuphane07.DATA
 {
     public static class KullaniciYoneticisi
     {
-        public static Kullanici Admin { get; } = new Kullanici("Ahmet Sarıkaya", "admin", "123");
         public static List<Kullanici> KullanciListesi { get; set; } = new List<Kullanici>();
 
         public static void KayitOl(Kullanici kullanici)

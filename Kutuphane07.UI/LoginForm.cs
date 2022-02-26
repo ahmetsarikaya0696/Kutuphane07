@@ -19,6 +19,7 @@ namespace Kutuphane07.UI
         {
             InitializeComponent();
             KullaniciVerileriniOku();
+            KitapVerileriniOku();
         }
 
 
@@ -37,27 +38,37 @@ namespace Kutuphane07.UI
             }
             else
             {
-                MessageBox.Show("Hatalı kullanıcı adı veya şifre girdiniz! Lütfen tekrar deneyiniz.");
+                MessageBox.Show("Kullanıcı adı veya şifre hatalı!");
             }
         }
 
-        bool girisYapBasarili = false;
+
         private bool GirisYapBasariliMi(string kullaniciAdi, string sifre)
         {
-            if (KullaniciYoneticisi.GirisBasariliMi(kullaniciAdi, sifre))
-                girisYapBasarili = !girisYapBasarili;
-            return girisYapBasarili;
+            return KullaniciYoneticisi.GirisBasariliMi(kullaniciAdi, sifre);
         }
 
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             KullaniciVerileriniKaydet();
+            KitapVerileriniKaydet();
+        }
+
+        private void KitapVerileriniKaydet()
+        {
+            string toJson = JsonConvert.SerializeObject(KutuphaneYoneticisi.KitapListesi);
+            File.WriteAllText("kitalistesiveri.json", toJson);
         }
 
         private static void KullaniciVerileriniKaydet()
         {
             string toJson = JsonConvert.SerializeObject(KullaniciYoneticisi.KullanciListesi);
             File.WriteAllText("veri.json", toJson);
+        }
+        private void KitapVerileriniOku()
+        {
+            string fromJson = File.ReadAllText("kitalistesiveri.json");
+            KutuphaneYoneticisi.KitapListesi = JsonConvert.DeserializeObject<List<Kitap>>(fromJson);
         }
         private void KullaniciVerileriniOku()
         {
