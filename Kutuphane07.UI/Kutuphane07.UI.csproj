@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminOnayiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminOnayiForm.Designer.cs">
+      <DependentUpon>AdminOnayiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BagisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminOnayiForm.resx">
+      <DependentUpon>AdminOnayiForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BagisForm.resx">
       <DependentUpon>BagisForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +143,9 @@
       <Project>{A184AD80-CAF8-49E2-B87A-5115C8A5DC02}</Project>
       <Name>Kutuphane07.DATA</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

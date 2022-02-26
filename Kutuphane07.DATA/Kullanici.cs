@@ -14,11 +14,12 @@ namespace Kutuphane07.DATA
             AdSoyad = adSoyad;
             KullaniciAdi = kullaniciAdi;
             Parola = parola;
+            OduncAlinanKitapListesi = new List<Kitap>();
         }
         public Guid Id { get; private set; }
         public string AdSoyad { get; set; }
         public string KullaniciAdi { get; set; }
         public string Parola { get; private set; }
-        public List<Kitap> oduncAlinanKitapListesi { get; set; }
+        public List<Kitap> OduncAlinanKitapListesi { get; set; }
     }
 }

@@ -202,6 +202,9 @@
             this.ClientSize = new System.Drawing.Size(274, 384);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(290, 423);
+            this.MinimumSize = new System.Drawing.Size(290, 423);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "RegisterForm";

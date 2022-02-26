@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cboTurler = new System.Windows.Forms.ComboBox();
             this.dgvKitapDetaylari = new System.Windows.Forms.DataGridView();
+            this.btnSeciliKitabıOduncAl = new System.Windows.Forms.Button();
+            this.btnSeciliKitabiSil = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKitapDetaylari)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +51,7 @@
             this.tsmiCikis});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(783, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(625, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,7 +90,7 @@
             // 
             this.txtAra.Location = new System.Drawing.Point(41, 28);
             this.txtAra.Name = "txtAra";
-            this.txtAra.Size = new System.Drawing.Size(247, 20);
+            this.txtAra.Size = new System.Drawing.Size(165, 20);
             this.txtAra.TabIndex = 2;
             this.txtAra.TextChanged += new System.EventHandler(this.txtAra_TextChanged);
             // 
@@ -96,7 +98,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(613, 31);
+            this.label3.Location = new System.Drawing.Point(455, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 1;
@@ -107,7 +109,7 @@
             this.cboTurler.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTurler.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTurler.FormattingEnabled = true;
-            this.cboTurler.Location = new System.Drawing.Point(653, 28);
+            this.cboTurler.Location = new System.Drawing.Point(495, 28);
             this.cboTurler.Name = "cboTurler";
             this.cboTurler.Size = new System.Drawing.Size(121, 21);
             this.cboTurler.TabIndex = 3;
@@ -128,14 +130,36 @@
             this.dgvKitapDetaylari.ReadOnly = true;
             this.dgvKitapDetaylari.RowHeadersVisible = false;
             this.dgvKitapDetaylari.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKitapDetaylari.Size = new System.Drawing.Size(759, 286);
+            this.dgvKitapDetaylari.Size = new System.Drawing.Size(601, 224);
             this.dgvKitapDetaylari.TabIndex = 4;
+            // 
+            // btnSeciliKitabıOduncAl
+            // 
+            this.btnSeciliKitabıOduncAl.Location = new System.Drawing.Point(213, 26);
+            this.btnSeciliKitabıOduncAl.Name = "btnSeciliKitabıOduncAl";
+            this.btnSeciliKitabıOduncAl.Size = new System.Drawing.Size(117, 23);
+            this.btnSeciliKitabıOduncAl.TabIndex = 5;
+            this.btnSeciliKitabıOduncAl.Text = "Seçili Kitabı Ödünç Al";
+            this.btnSeciliKitabıOduncAl.UseVisualStyleBackColor = true;
+            this.btnSeciliKitabıOduncAl.Click += new System.EventHandler(this.btnSeciliKitabıOduncAl_Click);
+            // 
+            // btnSeciliKitabiSil
+            // 
+            this.btnSeciliKitabiSil.Location = new System.Drawing.Point(336, 26);
+            this.btnSeciliKitabiSil.Name = "btnSeciliKitabiSil";
+            this.btnSeciliKitabiSil.Size = new System.Drawing.Size(96, 23);
+            this.btnSeciliKitabiSil.TabIndex = 6;
+            this.btnSeciliKitabiSil.Text = "Seçili Kitabı Sil";
+            this.btnSeciliKitabiSil.UseVisualStyleBackColor = true;
+            this.btnSeciliKitabiSil.Click += new System.EventHandler(this.btnSeciliKitabiSil_Click);
             // 
             // KutuphaneForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 356);
+            this.ClientSize = new System.Drawing.Size(625, 291);
+            this.Controls.Add(this.btnSeciliKitabiSil);
+            this.Controls.Add(this.btnSeciliKitabıOduncAl);
             this.Controls.Add(this.dgvKitapDetaylari);
             this.Controls.Add(this.cboTurler);
             this.Controls.Add(this.txtAra);
@@ -165,5 +189,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cboTurler;
         private System.Windows.Forms.DataGridView dgvKitapDetaylari;
+        private System.Windows.Forms.Button btnSeciliKitabıOduncAl;
+        private System.Windows.Forms.Button btnSeciliKitabiSil;
     }
 }

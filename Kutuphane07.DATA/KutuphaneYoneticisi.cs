@@ -13,7 +13,6 @@ namespace Kutuphane07.DATA
             new Kitap("İFA", new DateTime(2019, 01, 01), KitapTurEnum.Eğitim, "Sinan Canan", 184, "İnsanın Fabrika Ayarları"),
             new Kitap("Outliers", new DateTime(2019, 01, 01), KitapTurEnum.Eğitim, "Malcolm Gladwell", 244, "Çizginin Dışındakiler"),
             new Kitap("İnsan Nedir?", new DateTime(2019, 01, 01), KitapTurEnum.Roman, "Mark Twain", 136, "İnsan nedir?"),
-
             };
 
         public static void KitapBagisla(string kitapAdi, DateTime basimTarihi, KitapTurEnum kitapTuru, string yazarAdi, int sayfaSayisi, string aciklama = "")
@@ -22,14 +21,21 @@ namespace Kutuphane07.DATA
             KutuphaneYoneticisi.KitapListesi.Add(bagisYapilanKitap);
         }
 
-        public static void KitapImhaEt()
+        public static void KitapImhaEt(Kitap kitap)
         {
-
+            KutuphaneYoneticisi.KitapListesi.Remove(kitap);
         }
 
         public static void KitapOduncAl(Kullanici kullanici, Kitap kitap)
         {
+            kullanici.OduncAlinanKitapListesi.Add(kitap);
+            KutuphaneYoneticisi.KitapListesi.Remove(kitap);
+        }
 
+        public static void KitabiTeslimEt(Kullanici kullanici, Kitap kitap)
+        {
+            kullanici.OduncAlinanKitapListesi.Remove(kitap);
+            KutuphaneYoneticisi.KitapListesi.Add(kitap);
         }
 
         public static List<Kitap> SeciliTurdekiKitaplariDondur(KitapTurEnum kitapTuru)

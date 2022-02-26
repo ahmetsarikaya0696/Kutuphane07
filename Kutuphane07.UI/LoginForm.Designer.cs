@@ -40,6 +40,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(51, 172);
             this.label1.Name = "label1";
@@ -49,6 +51,8 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(51, 211);
             this.label2.Name = "label2";
@@ -58,6 +62,8 @@
             // 
             // txtKullaniciAdi
             // 
+            this.txtKullaniciAdi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKullaniciAdi.Location = new System.Drawing.Point(51, 188);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(167, 20);
@@ -65,6 +71,8 @@
             // 
             // txtSifre
             // 
+            this.txtSifre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSifre.Location = new System.Drawing.Point(51, 227);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(167, 20);
@@ -72,6 +80,8 @@
             // 
             // llblKayitOl
             // 
+            this.llblKayitOl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.llblKayitOl.AutoSize = true;
             this.llblKayitOl.Location = new System.Drawing.Point(51, 260);
             this.llblKayitOl.Name = "llblKayitOl";
@@ -83,6 +93,8 @@
             // 
             // btnGiris
             // 
+            this.btnGiris.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGiris.Location = new System.Drawing.Point(138, 250);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(80, 23);
@@ -93,6 +105,8 @@
             // 
             // pbUser
             // 
+            this.pbUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbUser.BackgroundImage = global::Kutuphane07.UI.Properties.Resources.user;
             this.pbUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbUser.Location = new System.Drawing.Point(54, 12);
@@ -113,6 +127,9 @@
             this.Controls.Add(this.txtKullaniciAdi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(286, 327);
+            this.MinimumSize = new System.Drawing.Size(286, 327);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";

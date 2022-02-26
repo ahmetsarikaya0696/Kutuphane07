@@ -29,7 +29,14 @@ namespace Kutuphane07.UI
 
         private void tsmiHesabim_Click(object sender, EventArgs e)
         {
-            new HesabimForm(kullanici).ShowDialog();
+            HesabimForm hf = new HesabimForm(kullanici);
+            hf.KitapTeslimEdildi += Hf_KitapTeslimEdildi;
+            hf.ShowDialog();
+        }
+
+        private void Hf_KitapTeslimEdildi(object sender, EventArgs e)
+        {
+            FormuYenile();
         }
 
         private void tsmiBagisYap_Click(object sender, EventArgs e)
@@ -40,6 +47,11 @@ namespace Kutuphane07.UI
         }
 
         private void Bf_BagisYapildi(object sender, EventArgs e)
+        {
+            FormuYenile();
+        }
+
+        private void FormuYenile()
         {
             dgvKitapDetaylari.DataSource = null;
             dgvKitapDetaylari.DataSource = KutuphaneYoneticisi.KitapListesi;
@@ -59,6 +71,32 @@ namespace Kutuphane07.UI
                 dgvKitapDetaylari.DataSource = KutuphaneYoneticisi.KitapListesi;
             else
                 dgvKitapDetaylari.DataSource = KutuphaneYoneticisi.SeciliTurdekiKitaplariDondur((KitapTurEnum)(cboTurler.SelectedIndex));
+        }
+
+        private void btnSeciliKitabıOduncAl_Click(object sender, EventArgs e)
+        {
+            if (dgvKitapDetaylari.SelectedRows.Count == 0) return;
+
+            Kitap oduncAlinanKitap = (Kitap)dgvKitapDetaylari.SelectedRows[0].DataBoundItem;
+            if (oduncAlinanKitap != null)
+            {
+                KutuphaneYoneticisi.KitapOduncAl(kullanici, oduncAlinanKitap);
+                FormuYenile();
+            }
+        }
+
+        private void btnSeciliKitabiSil_Click(object sender, EventArgs e)
+        {
+            AdminOnayiForm aof = new AdminOnayiForm();
+            aof.KitapSilindi += Aof_KitapSilindi;
+            aof.ShowDialog();
+        }
+
+        private void Aof_KitapSilindi(object sender, EventArgs e)
+        {
+            Kitap silinecekKitap = (Kitap)dgvKitapDetaylari.SelectedRows[0].DataBoundItem;
+            KutuphaneYoneticisi.KitapImhaEt(silinecekKitap);
+            FormuYenile();
         }
     }
 }

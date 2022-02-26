@@ -36,11 +36,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.d = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvOduncAlinanKitaplar = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.d = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOduncAlinanKitaplar)).BeginInit();
@@ -48,16 +49,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.lblKullaniciParola);
             this.groupBox1.Controls.Add(this.lblKullaniciAdi);
             this.groupBox1.Controls.Add(this.lblKullaniciAdSoyad);
             this.groupBox1.Controls.Add(this.lblKullaniciId);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(380, 194);
+            this.groupBox1.Size = new System.Drawing.Size(380, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Bilgilerim";
@@ -121,60 +125,86 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Ad, Soyad:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(291, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 22);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Kitap Teslim Et";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // d
-            // 
-            this.d.Location = new System.Drawing.Point(114, 164);
-            this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(171, 20);
-            this.d.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Son Teslim Tarihi:";
-            // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgvOduncAlinanKitaplar);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.d);
-            this.groupBox2.Location = new System.Drawing.Point(399, 13);
+            this.groupBox2.Location = new System.Drawing.Point(398, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(383, 194);
+            this.groupBox2.Size = new System.Drawing.Size(479, 173);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ödünç Alınan Kitaplar";
             // 
             // dgvOduncAlinanKitaplar
             // 
+            this.dgvOduncAlinanKitaplar.AllowUserToAddRows = false;
+            this.dgvOduncAlinanKitaplar.AllowUserToDeleteRows = false;
+            this.dgvOduncAlinanKitaplar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOduncAlinanKitaplar.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOduncAlinanKitaplar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOduncAlinanKitaplar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvOduncAlinanKitaplar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOduncAlinanKitaplar.Location = new System.Drawing.Point(3, 16);
+            this.dgvOduncAlinanKitaplar.MultiSelect = false;
             this.dgvOduncAlinanKitaplar.Name = "dgvOduncAlinanKitaplar";
-            this.dgvOduncAlinanKitaplar.Size = new System.Drawing.Size(377, 139);
+            this.dgvOduncAlinanKitaplar.ReadOnly = true;
+            this.dgvOduncAlinanKitaplar.RowHeadersVisible = false;
+            this.dgvOduncAlinanKitaplar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOduncAlinanKitaplar.Size = new System.Drawing.Size(473, 154);
             this.dgvOduncAlinanKitaplar.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Id:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(399, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Son Teslim Tarihi:";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(739, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 22);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Kitap Teslim Et";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // d
+            // 
+            this.d.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.d.Location = new System.Drawing.Point(496, 186);
+            this.d.Name = "d";
+            this.d.Size = new System.Drawing.Size(174, 20);
+            this.d.TabIndex = 9;
             // 
             // HesabimForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 217);
+            this.ClientSize = new System.Drawing.Size(890, 217);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.d);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(906, 256);
+            this.MinimumSize = new System.Drawing.Size(906, 256);
             this.Name = "HesabimForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HesabimForm";
@@ -182,9 +212,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOduncAlinanKitaplar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -198,10 +228,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker d;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvOduncAlinanKitaplar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker d;
     }
 }
