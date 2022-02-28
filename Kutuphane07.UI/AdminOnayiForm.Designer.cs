@@ -53,6 +53,7 @@
             this.txtAdminSifre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAdminSifre.Location = new System.Drawing.Point(22, 279);
             this.txtAdminSifre.Name = "txtAdminSifre";
+            this.txtAdminSifre.PasswordChar = '*';
             this.txtAdminSifre.Size = new System.Drawing.Size(186, 20);
             this.txtAdminSifre.TabIndex = 7;
             // 

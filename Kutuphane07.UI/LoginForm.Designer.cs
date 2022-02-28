@@ -75,6 +75,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSifre.Location = new System.Drawing.Point(51, 227);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(167, 20);
             this.txtSifre.TabIndex = 1;
             // 
